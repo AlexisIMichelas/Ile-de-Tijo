@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		<meta name="description" content="{% block description %}{% endblock %}">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap">
+		<link rel="stylesheet" href="/assets/css/style.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+		<link rel="icon" type="image/png" href="/assets/images/koala_tete.png"/> {% block stylesheet %}{% endblock %}
+		</head>
+		<body>
+			<div class="background"></div>
+			<aside class="nav">
+				<nav class="navbar">
+					<label for="btn" class="icon">
+						<svg viewbox="0 0 100 80" width="40" height="40">
+							<rect width="100" height="15"></rect>
+							<rect y="35" width="100" height="15"></rect>
+							<rect y="70" width="100" height="15"></rect>
+						</svg>
+					</label>
+					<input type="checkbox" id="btn">
+					<ul class="nav-menu">
+						<li class="nav-item">
+							<a class="koala_tete" href="/"></a>
+						</li>
+						<li class="nav-item">
+							<a class="planche" href="/jeux">Jeux</a>
+						</li>
+						<li class="nav-item">
+							<a class="planche" href="/galerie">Galerie</a>
+						</li>
+						<li class="nav-item">
+							<a class="planche" href="/snack">Snack</a>
+						</li>
+						<li class="nav-item">
+							<a class="planche" href="/infos">Infos Pratiques</a>
+						</li>
+						<li class="nav-item">
+							<a class="planche" href="/anniversaire">Anniversaire</a>
+						</li>
+						<li class="nav-item">
+							<a class="planche-rouge" href="/reservation">Réservation</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+			<main>
+				{% block content %}{% endblock %}
+			</main>
+			{% include '_footer.html.twig' %}
+			{% block javascript %}{% endblock %}
+		</body>
+	</html>
